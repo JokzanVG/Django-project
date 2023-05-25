@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+
+    {% comment %} Boostrap CDN {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    {% comment %} aletify CDN {% endcomment %}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+
+    <script src="https://kit.fontawesome.com/d9de7fd168.js" crossorigin="anonymous"></script>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product_view.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product_card.css' %}">
+</head>
+<body>
+    {#barra de navegacion#}
+    {% include 'toolpocket_app/inc/navbar.html' %}
+
+    {% block content %}
+        {#aqui carga el cotenido#}
+    {% endblock content %}
+
+    {#Pie de paginas#}
+    {% include 'toolpocket_app/inc/footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    {% comment %} Boostrap CDN {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    {% comment %} aletify CDN {% endcomment %}
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    {% comment %} OWL CARRO {% endcomment %}
+    <script src="{% static '/js/owl.carousel.min.js' %}"> </script>
+
+    <script>
+        alertify.set('notifier','position', 'top-left', 'text-color:red');
+        {% for msg in messages %}
+            alertify.warning('{{ msg }}','ajs-message');
+        {% endfor %}
+    </script>
+
+    <script>
+        var searchProductsUrl = "{% url 'search_products' %}";
+    </script>
+    <script src="{% static 'js/searchbar.js' %}"></script>
+
+
+    {% block scripts %}
+
+
+
+    {% endblock scripts %}
+</body>
+
+
+</html>

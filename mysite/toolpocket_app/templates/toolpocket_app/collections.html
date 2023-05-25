@@ -1,0 +1,40 @@
+{% extends 'toolpocket_app/layouts/main.html' %}
+{#contenido cargado#}
+{% block content %}
+
+    <div class="py-3 bg-bar">
+        <div class="container">
+            <a class="text-white" href="{% url 'home' %}">
+                Inicio /
+            </a>
+            <a class="text-white" href="{% url 'collections' %}">
+                Categorías
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                    <h1 class="sign">Categorías</h1>
+                    <hr>
+                    <div class="row">
+                        {% for item in category %}
+                            <div class="col-md-4">
+                                <div class="card carta">
+                                    <a href="{% url 'collectionsview' item.slug %}">
+                                        <div class="card-body">
+                                            <div class="category-image">
+                                                <img src="{{ item.image.url }}" alt="Category image" height="290"/>
+                                            </div>
+                                            <h4 class="text-center mt-4">{{  item.name }}</h4>
+                                        </div>
+                                     </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock content %}

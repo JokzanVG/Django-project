@@ -1,0 +1,35 @@
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bg-nav {
+    background: linear-gradient(rgba(13, 17, 38, 0.76), rgba(33, 34, 58, 0.76));
+}
+
+.content {
+    margin-top: 70px; /* Ajusta el valor según el tamaño de tu barra de navegación */
+}
+
+.dark-dropdown {
+    background: linear-gradient(145deg, rgba(33, 34, 58, 0.96) 0%, rgb(42, 29, 63, 0.96) 55%, rgba(33, 34, 58, 0.96) 95%); /* Cambia el color de fondo a tu elección */
+}
+
+.dark-dropdown .dropdown-item:hover,
+.dark-dropdown .dropdown-item:focus {
+    background-color: rgb(51, 37, 77); /* Cambia el color de fondo al seleccionar o poner el cursor sobre el elemento */
+    color: #fff; /* Cambia el color del texto al seleccionar o poner el cursor sobre el elemento */
+}
+
+.dark-dropdown .dropdown-item {
+    border-bottom: 1px solid rgba(100, 70, 124, 0.5);
+}
+
+.dark-dropdown .dropdown-item:last-child {
+    border-bottom: 1px solid rgba(100, 70, 124, 0.5);
+}
+
+.bg-text {
+    color: #838491; /* Cambia el color del texto a tu elección */
+}
+
+

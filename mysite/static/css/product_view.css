@@ -1,0 +1,125 @@
+.positive-point {
+  color: green;
+  font-weight: bold;
+}
+
+.negative-point {
+  color: red;
+  font-weight: bold;
+}
+
+.serviceBox {
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px 20px 40px;
+  margin: 0 -5px;
+  position: relative;
+  z-index: 1;
+}
+
+.serviceBox:before,
+.serviceBox:after {
+  content: '';
+  background-color: transparent;
+  border: 2px solid #5A3AFD;
+  border-radius: 20px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  right: 15px;
+  bottom: 10px;
+  z-index: -1;
+}
+
+.serviceBox .service-icon {
+  color: #fff;
+  background: #6d2b91;
+  font-size: 28px;
+  padding: 1px 30px;
+  margin: 25px 0 25px;
+  border-radius: 20px 20px 20px 20px;
+  display: inline-block;
+}
+
+.serviceBox .title {
+  color: #671f93;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+.serviceBox .description {
+  font-size: 14px;
+  line-height: 23px;
+  margin: 0 10px;
+}
+
+.service-icon {
+  transition: background-color 0.3s;
+}
+
+.service-icon:hover {
+  background-color: #5a1488;
+}
+
+/* Ajustes para hacerlo responsivo en iPad Air y iPad Mini */
+
+@media only screen and (max-width: 480px) {
+  .serviceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .serviceBox .service-icon {
+    margin: 15px 0;
+  }
+
+  .serviceBox .btn {
+    width: 80%;
+    max-width: 200px;
+    margin: 15px auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+    .serviceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .serviceBox .service-icon {
+    font-size: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .serviceBox .btn {
+    width: 80%;
+    max-width: 200px;
+    margin: 15px auto;
+  }
+}
+
+.details{
+    background: rgba(21, 12, 30, 0.91);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    color: #e98df6;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.bg-desc{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #7281c7;;
+  background: #0d0826;
+  border-radius: 10px;
+}

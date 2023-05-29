@@ -24,5 +24,6 @@ urlpatterns = [
     path('logout/', authview.logoutpage, name='logout'),
     path('profile/', views.profile, name='profile'),
     path('add_to_favorites/', views.add_to_favorites, name='add_to_favorites'),
+    path('about_page/', views.about_page, name='about_page'),
 ]
 

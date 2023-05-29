@@ -68,7 +68,7 @@
                         </p>
                     {% endif %}
                     <p>
-                        <a href="#!" class="text-reset">Acerca de</a>
+                        <a href="{% url 'about_page' %}" class="text-reset">Acerca de</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -80,8 +80,8 @@
                     <p>
                         <i class="fas fa-envelope me-3 text-secondary"></i>
                         ToolPocket@itmexicali.edu.mx
-                        <img src="{% static 'images/tecnm.png' %}" style="height: 82px" alt="tecnm-logo">
-                        <img src="{% static 'images/itm.png' %}" style="height: 82px" alt="itm-logo">
+                        <a class="navbar-brand" href="https://www.tecnm.mx/" target="_blank"><img src="{% static 'images/tecnm.png' %}" style="height: 73px" alt="tecnm-logo"></a>
+                        <a class="navbar-brand" href="http://www.itmexicali.edu.mx/" target="_blank"><img src="{% static 'images/itm.png' %}" style="height: 73px" alt="itm-logo"></a>
                     </p>
                 </div>
                 <!-- Grid column -->

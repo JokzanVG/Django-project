@@ -125,3 +125,5 @@ def add_to_favorites(request):
         user_profile.favorite_products.add(product)
         messages.success(request, f'{product.name} agregado a tus favoritos')
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+def about_page(request):
+    return render(request, "toolpocket_app/layouts/about.html")
